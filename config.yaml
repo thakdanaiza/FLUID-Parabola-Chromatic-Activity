@@ -1,0 +1,56 @@
+input_video: input/tracked_full_frame_rectified.mp4
+output_root: output
+profiles_to_run:
+  - window_a
+  - window_b
+
+# Exact V06 selections. Frame indices are zero-based and inclusive.
+profiles:
+  window_a:
+    start_frame: 1900
+    end_frame: 2522
+    roi_xywh: [330, 425, 374, 311]
+    expected_fps: 240.003840061441
+    expected_map_count: 152
+  window_b:
+    start_frame: 2522
+    end_frame: 2754
+    roi_xywh: [351, 353, 340, 331]
+    expected_fps: 240.0
+    expected_map_count: 55
+
+activity:
+  backend: cupy
+  gpu_id: 0
+  color_space: srgb_d65_cielab
+  components: [a, b]
+  temporal_lag_frames: 2
+  source_window_frames: 16
+  stride_frames: 4
+  reducer: mean
+
+normalization:
+  low_percentile: 1.0
+  high_percentile: 99.0
+  gaussian_blur_kernel: 5
+  activity_mask: otsu_first_map
+
+optical_flow:
+  short_interval_map_gap: 1
+  long_interval_map_gap: 5
+  pyr_scale: 0.5
+  levels: 3
+  winsize: 21
+  iterations: 3
+  poly_n: 5
+  poly_sigma: 1.2
+  flags: 0
+  opencv_threads: 1
+
+raw_activity:
+  pooled_area_percentiles: [90.0, 95.0, 99.0]
+
+output:
+  h5_compression: gzip
+  gzip_level: 4
+
