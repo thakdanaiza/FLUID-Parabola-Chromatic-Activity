@@ -1,5 +1,7 @@
 # FLUID-Parabola-Chromatic-Activity
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23713125.svg)](https://doi.org/10.5281/zenodo.23713125)
+
 Standalone command-line processing for the V06 flight selections. It writes the
 raw chromatic-activity stack and the complete short- and long-interval metric
 series. It does not prepare/stabilize video and does not create figures or paper
@@ -18,4 +20,15 @@ stacks used the explicit GPU sRGB-D65-CIELAB implementation.
 Each profile produces `activity_stack.h5`, `raw_activity_metrics.csv`,
 `short_interval_metrics.csv`, `long_interval_metrics.csv`, and
 `run_metadata.json`.
+
+## Citation
+
+If you use this software, cite the archived v1.0.0 release:
+
+> Sirisombat, T. (2026). FLUID-Parabola Chromatic Activity (v1.0.0).
+> Zenodo. https://doi.org/10.5281/zenodo.23713126
+
+The version-independent DOI for this software is
+https://doi.org/10.5281/zenodo.23713125. Citation metadata is also available in
+`CITATION.cff`.
 
