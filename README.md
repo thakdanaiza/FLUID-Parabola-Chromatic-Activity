@@ -23,10 +23,10 @@ Each profile produces `activity_stack.h5`, `raw_activity_metrics.csv`,
 
 ## Citation
 
-If you use this software, cite the archived v1.0.0 release:
+If you use this software, cite the archived v1.0.1 release:
 
-> Sirisombat, T. (2026). FLUID-Parabola Chromatic Activity (v1.0.0).
-> Zenodo. https://doi.org/10.5281/zenodo.23713126
+> Sirisombat, T. (2026). FLUID-Parabola Chromatic Activity (v1.0.1).
+> Zenodo. https://doi.org/10.5281/zenodo.23719667
 
 The version-independent DOI for this software is
 https://doi.org/10.5281/zenodo.23713125. Citation metadata is also available in
